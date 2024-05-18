@@ -44,6 +44,16 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@Composable
+fun EditNumberField(modifier: Modifier = Modifier) {
+    TextField(
+        value = "",
+        onValueChange = {},
+        modifier = modifier
+    )
+}
+
+
 
 @Composable
 fun TipTimeLayout(modifier: Modifier = Modifier) {
@@ -63,6 +73,7 @@ fun TipTimeLayout(modifier: Modifier = Modifier) {
                 .padding(bottom = 16.dp, top = 40.dp)
                 .align(alignment = Alignment.Start)
         )
+        EditNumberField()
         Text(
             text = stringResource(R.string.tip_amount, "$0.00"),
             style = MaterialTheme.typography.displaySmall
